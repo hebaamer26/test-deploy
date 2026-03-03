@@ -117,12 +117,13 @@ export default function CartItem({ info }: { info: CartProduct }) {
                         </div>
                     </div>
 
-                    <div className="w-full sm:w-auto flex flex-row sm:flex-col justify-between sm:justify-start items-center sm:items-end flex-shrink-0 text-right mt-4 sm:mt-0 border-t sm:border-t-0 border-gray-200 pt-4 sm:pt-0">
-                        <div className="text-sm text-gray-500 mb-1 sm:block hidden">Total</div>
-                        <div className="text-sm text-gray-500 mb-1 sm:hidden block font-medium">Total:</div>
-                        <div className="text-2xl text-gray-700 font-bold flex gap-2 justify-center">
+                    {/* Total Section */}
+                    <div className="w-full mt-4 pt-4 border-t border-gray-200 sm:w-auto sm:mt-0 sm:pt-0 sm:border-none sm:ml-auto flex sm:flex-col justify-between sm:justify-center items-center sm:items-end flex-shrink-0 text-right">
+                        <div className="text-sm text-gray-500 mb-2 hidden sm:block">Total</div>
+                        <div className="text-sm text-gray-700 font-medium block sm:hidden">Total:</div>
+                        <div className="text-2xl text-[#FF7A00] font-bold flex items-baseline gap-1">
                             {price * count}
-                            <span className="text-lg text-gray-400 mt-1 font-medium">EGP</span>
+                            <span className="text-sm text-gray-500 font-medium">EGP</span>
                         </div>
                     </div>
                 </div>
