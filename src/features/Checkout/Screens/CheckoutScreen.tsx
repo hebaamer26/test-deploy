@@ -64,6 +64,7 @@ export default function CheckoutScreen() {
             details: values.details,
             phone: values.phone,
             city: values.city,
+            paymentMethod: "cash",
           },
         });
 
@@ -80,6 +81,11 @@ export default function CheckoutScreen() {
             details: values.details,
             phone: values.phone,
             city: values.city,
+            paymentMethod: "card",
+            cardNumber: values.cardNumber,
+            expiryDate: values.expiryDate,
+            cvc: values.cvc,
+            cardHolder: values.cardHolder,
           },
           url: location.origin,
         });
