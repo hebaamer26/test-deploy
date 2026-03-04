@@ -206,7 +206,7 @@ export default function ForgetPasswordForm() {
                                             {...registerVerify("resetCode")}
                                             type="text"
                                             className="px-3 border-2 border-zinc-200 rounded-lg py-3 text-center tracking-widest text-lg font-semibold"
-                                            placeholder="123456"
+                                            placeholder="Enter code"
                                         />
                                         {verifyErrors.resetCode && (<p className="text-red-500 mt-2 mx-1">{verifyErrors.resetCode.message}</p>)}
                                     </div>
