@@ -125,7 +125,7 @@ export default function CheckoutScreen() {
 
         {numOfCartItems > 0 ? (
           <>
-            {/* Progress Steps */}
+            
             <div className="flex items-center justify-center mb-8 sm:mb-12">
               <div className="flex items-center gap-2 sm:gap-4">
                 <div className="flex items-center gap-1 sm:gap-2">
@@ -153,7 +153,7 @@ export default function CheckoutScreen() {
 
             <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
 
-              {/* Hidden Payment Method */}
+            
               <input type="hidden" value={paymentMethod} {...register("paymentMethod")} />
 
               {/* ---------------- Left Side ---------------- */}

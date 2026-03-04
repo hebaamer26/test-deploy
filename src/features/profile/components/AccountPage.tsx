@@ -94,7 +94,7 @@ export default function AccountPage({ profile }: AccountPageProps) {
           </div>
         </div>
 
-        {/* Placeholder for future edit – no layout or styling change */}
+       
         <div className="rounded-2xl bg-white shadow-sm border border-gray-100 overflow-hidden">
           <div className="px-5 py-4 sm:px-6 border-b border-gray-100">
             <h2 className="text-lg font-semibold text-gray-800">Edit Profile</h2>

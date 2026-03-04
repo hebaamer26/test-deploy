@@ -9,7 +9,6 @@ export default async function AllProducts() {
 
       <div className="min-h-screen bg-white py-6 sm:py-8 px-4 sm:px-6 lg:px-2 mx-auto">
         <div className="container mx-auto ">
-          {/* Header with Orange Gradient */}
           <header className=" text-white w-full">
             {/* Breadcrumbs */}
             <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6">
