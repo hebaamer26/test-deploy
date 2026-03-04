@@ -25,7 +25,7 @@ export function Footer() {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-8 text-center md:text-left">
           {/* Company Info - Takes 2 columns */}
-          <div className="lg:col-span-2 space-y-6 flex flex-col items-center md:items-start">
+          <div className="md:col-span-2 lg:col-span-2 space-y-6 flex flex-col items-center md:items-start">
             {/* Logo */}
             <div className="inline-block px-4 py-2 rounded-xl h-[50px] w-[170px] relative">
               <Link href="/" className="flex items-center absolute inset-0 justify-center">
@@ -42,19 +42,19 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="tel:+18001234567" className="flex items-center gap-3 text-gray-300 hover:text-[#FF7A00] transition-colors group">
+              <a href="tel:+18001234567" className="flex items-center justify-center md:justify-start gap-3 text-gray-300 hover:text-[#FF7A00] transition-colors group">
                 <BiPhone className="w-4 h-4 text-[#FF7A00]" />
                 <span>+1 (800) 123-4567</span>
               </a>
 
-              <a href="mailto:support@freshcart.com" className="flex items-center gap-3 text-gray-300 hover:text-[#FF7A00] transition-colors group">
+              <a href="mailto:support@freshcart.com" className="flex items-center justify-center md:justify-start gap-3 text-gray-300 hover:text-[#FF7A00] transition-colors group">
                 <IoMdMail className="w-4 h-4 text-[#FF7A00]" />
                 <span>support@freshcart.com</span>
               </a>
 
-              <div className="flex items-center gap-3 text-gray-300">
+              <div className="flex items-center justify-center md:justify-start gap-3 text-gray-300">
                 <BiMapPin className="w-4 h-4 text-[#FF7A00] flex-shrink-0" />
-                <span>123 Commerce Street, New York, NY 10001</span>
+                <span className="text-center md:text-left">123 Commerce Street, New York, NY 10001</span>
               </div>
             </div>
 

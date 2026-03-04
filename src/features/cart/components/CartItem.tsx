@@ -89,29 +89,28 @@ export default function CartItem({ info }: { info: CartProduct }) {
                         <h3 className="text-lg mb-2 pr-8">{title}</h3>
                         <span className="inline-block px-3 py-1 rounded-full bg-orange-50 text-[#FF7A00] text-sm mb-3">{category.name}</span>
 
-                        {/* Price Section */}
-                        <div className="mb-4">
-                            <div className="flex justify-center sm:justify-start items-baseline gap-2">
-                                <span className="text-lg text-orange-400 font-bold">{price} EGP</span>
+                        {/* Price and Quantity Group */}
+                        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 justify-center sm:justify-start mb-2">
+                            {/* Price */}
+                            <div className="flex items-baseline gap-1">
+                                <span className="text-2xl font-bold text-gray-800">{price}</span>
+                                <span className="text-sm font-bold text-[#FF7A00]">EGP</span>
                             </div>
-                        </div>
 
-                        {/* Quantity Selector */}
-                        <div className="flex flex-col sm:flex-row items-center gap-3 justify-center sm:justify-start">
-                            <span className="text-gray-700 text-lg font-normal">Quantity :</span>
-                            <div className="flex items-center gap-2">
+                            {/* Quantity Selector - Pill Style */}
+                            <div className="flex items-center gap-1 bg-white p-1 border border-gray-200 rounded-xl shadow-sm">
                                 <button
-                                    className="w-9 h-9 rounded-lg bg-orange-400 text-white flex items-center justify-center hover:bg-[#E66D00] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="w-8 h-8 rounded-lg text-gray-500 flex items-center justify-center hover:bg-orange-50 hover:text-[#FF7A00] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                     onClick={() => handleUpdate(count - 1)}
                                 >
-                                    <BiMinus className="w-4 h-4" />
+                                    <BiMinus className="w-5 h-5" />
                                 </button>
-                                <span className="w-12 text-center">{count}</span>
+                                <span className="w-10 text-center font-semibold text-gray-700">{count}</span>
                                 <button
-                                    className="w-9 h-9 rounded-lg bg-orange-400 text-white flex items-center justify-center hover:bg-[#E66D00] transition-colors"
+                                    className="w-8 h-8 rounded-lg text-gray-500 flex items-center justify-center hover:bg-orange-50 hover:text-[#FF7A00] transition-colors"
                                     onClick={() => handleUpdate(count + 1)}
                                 >
-                                    <BiPlus className="w-4 h-4" />
+                                    <BiPlus className="w-5 h-5" />
                                 </button>
                             </div>
                         </div>
