@@ -1,4 +1,4 @@
-import Wishlist from "../Copmponents/Wishlist";
+import Wishlist from "../Copmponents/Wishlist"
 
 
 export default function WishlistScreen() {

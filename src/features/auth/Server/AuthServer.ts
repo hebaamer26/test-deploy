@@ -16,7 +16,8 @@ export default async function SetToken(token:string,rememberUser:boolean):Promis
   }else{
     cookieStore.set("token",token,{
         httpOnly:true,
-        maxAge: 1*24*60*60
+        maxAge: 1*24*60*60,
+        secure:true
       })
   }
 

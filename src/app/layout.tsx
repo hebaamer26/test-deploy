@@ -8,6 +8,7 @@ import { verifyToken } from "@/features/auth/Server/AuthServer";
 import { CartState } from '../features/cart/store/CartSlice';
 import { getLoggedUserCart } from "@/features/cart/Server/CartServerAction";
 import { WishlistState, WishlistReducer } from "@/features/Wishlist/Store/WishlistSlice";
+import { getLoggedUserWishlist } from "@/features/Wishlist/Server/WishlistServerAction";
 import { UiState, uiReducer } from "@/store/uiSlice";
 
 
@@ -21,11 +22,12 @@ let cartState: CartState = {
 }
 
 
-const initialWishlistState = WishlistReducer(undefined, { type: '@@INIT' } as any);
 const initialUiState = uiReducer(undefined, { type: '@@INIT' } as any);
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
-  const AuthResponse = await verifyToken()
+  const AuthResponse = await verifyToken();
+  let initialWishlistState = WishlistReducer(undefined, { type: '@@INIT' } as any);
+
   if (AuthResponse.isAuthentication) {
     try {
       const cartResponse = await getLoggedUserCart();
@@ -36,8 +38,19 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         numOfCartItems: cartResponse.numOfCartItems,
         isLoading: false,
         error: null
-      }
+      };
 
+    } catch (error) {
+    }
+
+    try {
+      const wishlistResponse = await getLoggedUserWishlist();
+      initialWishlistState = {
+        numOfItems: wishlistResponse.count,
+        products: wishlistResponse.data,
+        isLoading: false,
+        error: null
+      };
     } catch (error) {
     }
   }

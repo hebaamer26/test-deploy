@@ -12,10 +12,10 @@ import { toast } from "react-toastify";
 
 export default function Wishlist() {
   const { products, numOfItems } = useAppSelector((state) => state.Wishlist);
+  const { isAuthentication } = useAppSelector((state: any) => state.Auth);
   const dispatch = useAppDispatch();
   const handleAddToCart = async (id: string) => {
-    const token = localStorage.getItem('token');
-    if (!token) {
+    if (!isAuthentication) {
       dispatch(openAuthModal("Please log in to add products to your cart."));
       return;
     }
