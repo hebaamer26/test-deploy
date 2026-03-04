@@ -270,7 +270,7 @@ export default function Navbar() {
                   <IoIosArrowDown />
                 </button>
                 <menu className="hidden group-hover:block absolute z-50 min-w-46 rounded-lg shadow-lg bg-zinc-100 *:rounded-lg *:hover:bg-zinc-200 duration-200 *:cursor-pointer divide-y-2 divide-gray-200">
-                  <li className="py-3 px-2">
+                  <li className="py-2 lg:py-3 px-2 xl:px-4">
                     <Link
                       href="/categories/6439d5b90049ad0b52b90048"
                       className="flex justify-start items-center gap-2"
@@ -279,7 +279,7 @@ export default function Navbar() {
                       <span className="text-gray-700">Man's Fashion</span>
                     </Link>
                   </li>
-                  <li className="py-3 px-2">
+                  <li className="py-2 lg:py-3 px-2 xl:px-4">
                     <Link
                       href="/categories/6439d58a0049ad0b52b9003f"
                       className="flex justify-start items-center gap-2"
@@ -288,7 +288,7 @@ export default function Navbar() {
                       <span className="text-gray-700">Woman's Fashion</span>
                     </Link>
                   </li>
-                  <li className="py-3 px-2">
+                  <li className="py-2 lg:py-3 px-2 xl:px-4">
                     <Link
                       href="/categories/6439d40367d9aa4ca97064cc"
                       className="flex justify-start items-center gap-2"
@@ -297,7 +297,7 @@ export default function Navbar() {
                       <span className="text-gray-700">Baby & Toys</span>
                     </Link>
                   </li>
-                  <li className="py-3 px-2">
+                  <li className="py-2 lg:py-3 px-2 xl:px-4">
                     <Link
                       href="/categories/6439d30b67d9aa4ca97064b1"
                       className="flex justify-start items-center gap-2"
@@ -306,7 +306,7 @@ export default function Navbar() {
                       <span className="text-gray-700">Beauty & Health</span>
                     </Link>
                   </li>
-                  <li className="py-3 px-2">
+                  <li className="py-2 lg:py-3 px-2 xl:px-4">
                     <Link
                       href="/categories/6439d2d167d9aa4ca970649f"
                       className="flex justify-start items-center gap-2"
@@ -315,7 +315,7 @@ export default function Navbar() {
                       <span className="text-gray-700">Electronics</span>
                     </Link>
                   </li>
-                  <li className="py-3 px-2">
+                  <li className="py-2 lg:py-3 px-2 xl:px-4">
                     <Link
                       href="/categories"
                       className="flex justify-start items-center gap-2"
@@ -441,7 +441,7 @@ export default function Navbar() {
             <div className="flex flex-col gap-2">
               <Link
                 href="/categories/6439d5b90049ad0b52b90048"
-                className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
+                className="flex items-center gap-3 p-2 sm:p-3 md:p-4 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <IoIosMan className="text-orange-400 text-lg" />
@@ -449,7 +449,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/categories/6439d58a0049ad0b52b9003f"
-                className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
+                className="flex items-center gap-3 p-2 sm:p-3 md:p-4 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <IoIosWoman className="text-orange-400 text-lg" />
@@ -457,7 +457,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/categories/6439d40367d9aa4ca97064cc"
-                className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
+                className="flex items-center gap-3 p-2 sm:p-3 md:p-4 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <FaBabyCarriage className="text-orange-400 text-lg" />
@@ -465,7 +465,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/categories/6439d30b67d9aa4ca97064b1"
-                className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
+                className="flex items-center gap-3 p-2 sm:p-3 md:p-4 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <BsFillBagPlusFill className="text-orange-400 text-lg" />
@@ -473,7 +473,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/categories/6439d2d167d9aa4ca970649f"
-                className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
+                className="flex items-center gap-3 p-2 sm:p-3 md:p-4 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <MdElectricBolt className="text-orange-400 text-lg" />
@@ -481,7 +481,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/categories"
-                className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
+                className="flex items-center gap-3 p-2 sm:p-3 md:p-4 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <BsThreeDots className="text-orange-400 text-lg" />

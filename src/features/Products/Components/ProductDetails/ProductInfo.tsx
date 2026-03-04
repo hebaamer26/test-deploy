@@ -92,20 +92,20 @@ export default function ProductInfo({ product }: { product: ProductDetailsTypes 
       <div className="container mx-auto px-6 py-8">
 
         {/* Breadcrumbs */}
-        <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500 mb-6">
+        <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6">
           <Link href="/" className="hover:text-[#FF7A00] transition-colors">
             Home
           </Link>
-          <BiChevronRight className="w-4 h-4" />
+          <BiChevronRight className="w-4 h-4 shrink-0" />
           <Link href="/" className="hover:text-[#FF7A00] transition-colors">
             {category.name}
           </Link>
-          <BiChevronRight className="w-4 h-4" />
+          <BiChevronRight className="w-4 h-4 shrink-0" />
           <span className="text-gray-700">{title}</span>
         </div>
 
         {/* ✅ Main Grid Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 mb-10 sm:mb-16">
 
           {/* ================= LEFT SIDE (Images) ================= */}
           <div className="lg:col-span-4">
@@ -129,7 +129,7 @@ export default function ProductInfo({ product }: { product: ProductDetailsTypes 
               {category.name}
             </span>
 
-            <h1 className="text-2xl sm:text-4xl mb-4 leading-tight">{title}</h1>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 sm:mb-4 leading-tight">{title}</h1>
 
             {/* Rating */}
             <div className="flex items-center gap-3 mb-6">
@@ -176,8 +176,8 @@ export default function ProductInfo({ product }: { product: ProductDetailsTypes 
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Quantity
               </label>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <div className="flex items-center border-2 border-gray-200 rounded-lg overflow-hidden">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+                <div className="flex items-center border-2 border-gray-200 rounded-lg overflow-hidden w-full sm:w-auto">
                   <button
                     id="decrease-qty"
                     className="px-4 py-3 text-gray-600 hover:bg-gray-100 hover:text-primary-600 transition disabled:opacity-50"
@@ -189,7 +189,7 @@ export default function ProductInfo({ product }: { product: ProductDetailsTypes 
                   <input
                     type="number"
                     min={1}
-                    className="w-16 text-center border-0 focus:ring-0 focus:outline-none text-lg font-medium"
+                    className="w-full sm:w-16 text-center border-0 focus:ring-0 focus:outline-none text-lg font-medium"
                     id="quantity"
                     onChange={(e) => { setCount(+e.target.value) }}
                     value={count}

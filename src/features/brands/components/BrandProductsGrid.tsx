@@ -16,24 +16,24 @@ export default function BrandProductsGrid({
 }: BrandProductsGridProps) {
   return (
     <section className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+        <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6">
           <Link href="/" className="hover:text-orange-600 transition-colors">
             Home
           </Link>
-          <BiChevronRight className="w-4 h-4" />
+          <BiChevronRight className="w-4 h-4 shrink-0" />
           <Link href="/brands" className="hover:text-orange-600 transition-colors">
             Brands
           </Link>
-          <BiChevronRight className="w-4 h-4" />
+          <BiChevronRight className="w-4 h-4 shrink-0" />
           <span className="text-gray-700">{brandName}</span>
         </div>
 
         {/* Title */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-800">{brandName}</h1>
-          <p className="text-gray-600 mt-1">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">{brandName}</h1>
+          <p className="text-sm sm:text-base text-gray-600 mt-1">
             {products.length} {products.length === 1 ? "product" : "products"}
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function BrandProductsGrid({
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6">
             {products.map((product) => (
               <ProductCard key={product._id} info={product} />
             ))}
