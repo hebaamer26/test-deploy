@@ -54,3 +54,56 @@ export async function ForgetPasswordServerAction(userData: ForgetPasswordTypes) 
         }
     }
 }
+
+const VerifyResetCodeSchema = zod.object({
+    resetCode: zod.string().min(1, "Reset code is required"),
+});
+
+export type VerifyResetCodeTypes = zod.infer<typeof VerifyResetCodeSchema>;
+
+export async function VerifyResetCodeServerAction(userData: VerifyResetCodeTypes) {
+    const validationResult = VerifyResetCodeSchema.safeParse(userData)
+    if (!validationResult.success) {
+        const errors: Record<string, string> = {}
+        validationResult.error.issues.forEach((issue) => {
+            const field = issue.path[0] as string
+            const message = issue.message
+            if (!errors[field]) {
+                errors[field] = message
+            }
+        })
+        return {
+            success: false,
+            message: "validation errors",
+            errors
+        }
+    }
+
+    try {
+        const options: AxiosRequestConfig = {
+            url: "https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode",
+            method: "post",
+            data: validationResult.data
+        }
+        const { data } = await axios.request(options)
+
+        return {
+            success: true,
+            message: 'Reset code successfully verified',
+            data
+        }
+
+    } catch (error) {
+        if (error instanceof AxiosError) {
+            const errorMessage = error.response?.data?.message || "Something went wrong";
+            return {
+                success: false,
+                message: errorMessage,
+            }
+        }
+        return {
+            success: false,
+            message: "Failed to verify reset code. Please try again later."
+        }
+    }
+}
