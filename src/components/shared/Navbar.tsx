@@ -272,7 +272,7 @@ export default function Navbar() {
                 <menu className="hidden group-hover:block absolute z-50 min-w-46 rounded-lg shadow-lg bg-zinc-100 *:rounded-lg *:hover:bg-zinc-200 duration-200 *:cursor-pointer divide-y-2 divide-gray-200">
                   <li className="py-3 px-2">
                     <Link
-                      href="/categories/mens"
+                      href="/categories/6439d5b90049ad0b52b90048"
                       className="flex justify-start items-center gap-2"
                     >
                       <IoIosMan className="text-orange-400" />
@@ -281,7 +281,7 @@ export default function Navbar() {
                   </li>
                   <li className="py-3 px-2">
                     <Link
-                      href="/categories/womens"
+                      href="/categories/6439d58a0049ad0b52b9003f"
                       className="flex justify-start items-center gap-2"
                     >
                       <IoIosWoman className="text-orange-400" />
@@ -290,16 +290,16 @@ export default function Navbar() {
                   </li>
                   <li className="py-3 px-2">
                     <Link
-                      href="/categories/baby"
+                      href="/categories/6439d40367d9aa4ca97064cc"
                       className="flex justify-start items-center gap-2"
                     >
                       <FaBabyCarriage className="text-orange-400" />
-                      <span className="text-gray-700">Baby & hrefys</span>
+                      <span className="text-gray-700">Baby & Toys</span>
                     </Link>
                   </li>
                   <li className="py-3 px-2">
                     <Link
-                      href="/categories/beauty"
+                      href="/categories/6439d30b67d9aa4ca97064b1"
                       className="flex justify-start items-center gap-2"
                     >
                       <BsFillBagPlusFill className="text-orange-400" />
@@ -308,7 +308,7 @@ export default function Navbar() {
                   </li>
                   <li className="py-3 px-2">
                     <Link
-                      href="/categories/electronics"
+                      href="/categories/6439d2d167d9aa4ca970649f"
                       className="flex justify-start items-center gap-2"
                     >
                       <MdElectricBolt className="text-orange-400" />
@@ -440,7 +440,7 @@ export default function Navbar() {
             <h3 className="text-gray-900 font-semibold mb-3">Categories</h3>
             <div className="flex flex-col gap-2">
               <Link
-                href="/categories/mens"
+                href="/categories/6439d5b90049ad0b52b90048"
                 className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -448,7 +448,7 @@ export default function Navbar() {
                 <span>Man's Fashion</span>
               </Link>
               <Link
-                href="/categories/womens"
+                href="/categories/6439d58a0049ad0b52b9003f"
                 className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -456,7 +456,7 @@ export default function Navbar() {
                 <span>Woman's Fashion</span>
               </Link>
               <Link
-                href="/categories/baby"
+                href="/categories/6439d40367d9aa4ca97064cc"
                 className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -464,7 +464,7 @@ export default function Navbar() {
                 <span>Baby & Toys</span>
               </Link>
               <Link
-                href="/categories/beauty"
+                href="/categories/6439d30b67d9aa4ca97064b1"
                 className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -472,7 +472,7 @@ export default function Navbar() {
                 <span>Beauty & Health</span>
               </Link>
               <Link
-                href="/categories/electronics"
+                href="/categories/6439d2d167d9aa4ca970649f"
                 className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-gray-50 transition duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
