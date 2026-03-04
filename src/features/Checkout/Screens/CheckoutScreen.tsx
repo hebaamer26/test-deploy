@@ -118,7 +118,7 @@ export default function CheckoutScreen() {
             <BiLockOpen className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="text-4xl">Secure Checkout</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl">Secure Checkout</h1>
             <p className="text-gray-600 text-sm">Your information is safe and secure</p>
           </div>
         </div>
@@ -126,32 +126,32 @@ export default function CheckoutScreen() {
         {numOfCartItems > 0 ? (
           <>
             {/* Progress Steps */}
-            <div className="flex items-center justify-center mb-12">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 bg-[#FF7A00] rounded-full flex items-center justify-center text-white">
+            <div className="flex items-center justify-center mb-8 sm:mb-12">
+              <div className="flex items-center gap-2 sm:gap-4">
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 text-sm sm:text-base bg-[#FF7A00] rounded-full flex items-center justify-center text-white">
                     1
                   </div>
-                  <span className="text-[#FF7A00]">Shipping</span>
+                  <span className="hidden sm:inline text-[#FF7A00]">Shipping</span>
                 </div>
-                <div className="w-16 h-0.5 bg-[#FF7A00]" />
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 bg-[#FF7A00] rounded-full flex items-center justify-center text-white">
+                <div className="w-8 sm:w-16 h-0.5 bg-[#FF7A00]" />
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 text-sm sm:text-base bg-[#FF7A00] rounded-full flex items-center justify-center text-white">
                     2
                   </div>
-                  <span className="text-[#FF7A00]">Payment</span>
+                  <span className="hidden sm:inline text-[#FF7A00]">Payment</span>
                 </div>
-                <div className="w-16 h-0.5 bg-gray-300" />
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-white">
+                <div className="w-8 sm:w-16 h-0.5 bg-gray-300" />
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 text-sm sm:text-base bg-gray-300 rounded-full flex items-center justify-center text-white">
                     3
                   </div>
-                  <span className="text-gray-600">Review</span>
+                  <span className="hidden sm:inline text-gray-600">Review</span>
                 </div>
               </div>
             </div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="grid lg:grid-cols-3 gap-8 container">
+            <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
 
               {/* Hidden Payment Method */}
               <input type="hidden" value={paymentMethod} {...register("paymentMethod")} />
@@ -294,7 +294,7 @@ export default function CheckoutScreen() {
                     <h2 className="text-2xl font-semibold text-gray-800">Payment Method</h2>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <button
                       type="button"
                       onClick={() => setPaymentMethod("card")}
@@ -347,7 +347,7 @@ export default function CheckoutScreen() {
                         )}
                       </div>
 
-                      <div className="grid grid-cols-2 gap-5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
                           <label className="block text-sm font-medium text-gray-700 mb-2">Expiry Date *</label>
                           <input
@@ -435,7 +435,7 @@ export default function CheckoutScreen() {
                     {/* Total */}
                     <div className="flex justify-between items-center pt-6 border-t border-gray-300 mb-6">
                       <span className="text-xl">Total</span>
-                      <span className="text-3xl text-[#FF7A00]">
+                      <span className="text-2xl sm:text-3xl text-[#FF7A00]">
                         ${total.toFixed(2)}
                       </span>
                     </div>
